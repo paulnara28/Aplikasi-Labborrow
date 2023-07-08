@@ -1,0 +1,10 @@
+.row .search {
+  margin-right: 10px;
+}
+
+.row-search {
+  display: flex;
+  align-items: center;
+  margin-left: 895px;
+  margin-buttom: 50px;
+}
