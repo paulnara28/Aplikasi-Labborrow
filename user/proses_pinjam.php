@@ -3,16 +3,6 @@
     if (!isset($_SESSION)) {
         session_start();
     }
-
- //    if(!isset($_SESSION['myusername']))
-	// {
-	// 	header("location:newlogin.php");
-	// }
-
-	// $username = $_SESSION['myusername'];
-	// //query data user
-	// $query = mysql_query("SELECT * FROM peminjam where username='$username'");
- //                  while ($qu = mysql_fetch_array($query))
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +10,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Proses Pinjam</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet" type="text/css">
-    <link href="../bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
 </head>
 <body>
 
@@ -32,7 +21,7 @@
 				<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4>Proses Pendataan</h4>
+						<h4>Pendataan Barang</h4>
 					</div>
 					<div class="panel-body">
 					<form action="proses_transaksi.php?id_anggota=<?php echo $_SESSION['id_anggota']; ?>" method="post">
@@ -69,16 +58,11 @@ $query = $mysqli->query("SELECT * FROM anggota WHERE id_anggota = '$anggota'");
 						</div>
 
 						<button type="submit" name="finish" class="btn btn-block btn-primary">Proses</button>
-		<div id="footer" style="margin-top: 40px">
-			<p id="footnote">
-				© Peminjaman Alat SMKN 1 Dlanggu.
-			</p>
-		</div>
 					</div>
 				</div>
 				</div>
-				<div class="col-md-4 ">
-					<h3>Barang yang Di Pinjam</h3>
+				<div class="col-md-6 ">
+					<h3>Barang</h3>
 					<?php
 
 							  if (isset($_SESSION['items'])) {

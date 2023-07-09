@@ -34,10 +34,6 @@ background: linear-gradient(to left, #DD5E89 , #F7BB97);">
                     <button class="btn btn-info btn-block login" type="submit">Login</button>
                     <a href="user/login_anggota.php" class="btn btn-info btn-block">Login Sebagai Anggota</a>
                 </form>
-                <br>
-                <center>
-                    <p>Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a></p>
-                </center>
             </div>
         </div>
     </div>
