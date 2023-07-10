@@ -1,9 +1,17 @@
-<?php include "templates/header.php";
+<!DOCTYPE html>
+<html lang="en">
 
-session_start();
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-?>
+<!-- Custom styles for this template -->
+<link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" >
 
+</head>
+<body>
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
           <h2 class="page-header">Pendaftaran Anggota</h2>
@@ -65,4 +73,8 @@ session_start();
           </div>
     </div>
 </div>
+  
+</body>
+
+
 <?php include "templates/footer.php"; ?>

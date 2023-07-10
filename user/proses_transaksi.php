@@ -47,10 +47,22 @@ session_start();
 											)") or die(mysqli_error());
 							}
 						}
+						
 						session_destroy();
-						echo '<a href="javascript:window.print()"><h3>Cetak</h3></a></font>';
-						echo "<a href='logout.php'>Logout</a>";
+						echo '<style>
+						@media print {
+						  .print-link {
+							display: none;
+						  }
+						}
+						</style>';
+						echo '<a href="javascript:window.print()" class="print-link"><h3>Cetak</h3></a>';
 						?>
+						<a href="logout.php" class="print-link">Logout</a>
+						
+
+						
+						
 					</div>
 				</div>
 			</div>

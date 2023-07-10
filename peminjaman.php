@@ -75,7 +75,11 @@ include "config/koneksi.php" ?>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="page-header">Peminjaman</h2>
           <hr>
-          <a href="tambahpeminjaman.php" class="btn btn-danger float-right" style="margin-bottom: 20px;"><i class="fa fa-plus"></i>+ Tambah Peminjaman</a>
+
+          <div class="row-search" style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: flex-end;">
+         <a href="tambahpeminjaman.php" class="btn btn-primary"><i class="fa fa-plus"></i>+ Tambah Peminjaman</a>
+        </div>
+
               <table id="tabelpeminjaman" class="table table-bordered  table-hover">
                      <thead>
                         <tr>
@@ -100,7 +104,7 @@ include "config/koneksi.php" ?>
                           <td><?php echo $lihat ['nama'];?></td>
                           <td><?php echo date('d-m-Y',strtotime($lihat['tgl_pinjam'])); ?></td>
                           <td><span class="btn btn-xs btn-<?php echo $lihat['status'] == 1 ? 'success' : 'danger' ?>"><?php echo $lihat['status'] == 1 ? 'Sudah Dikembalikan' : 'Belum Dikembalikan'; ?></span></td>
-                          <td> <a href="editpeminjaman.php?id_peminjaman=<?php echo $lihat['id_peminjaman']; ?>" class="btn btn-danger">Edit</a>
+                          <td> <a href="editpeminjaman.php?id_peminjaman=<?php echo $lihat['id_peminjaman']; ?>" class="btn btn-primary">Edit</a>
                           <a href="hapuspeminjaman.php?id=<?php echo $lihat['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a></td>
 
 

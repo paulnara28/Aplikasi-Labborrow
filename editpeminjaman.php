@@ -129,10 +129,11 @@ include "config/koneksi.php" ?>
                     </select>
                     </div>
 
-             <div class="box-footer">
-            </div>
-            <button type="submit" class="btn btn-danger">Simpan</button>
+          <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
             <a href="peminjaman.php" class="btn btn-danger">Back</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+           </div>
+
             </div>
             </form>
             </section><!-- /.content -->

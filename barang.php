@@ -71,10 +71,12 @@ include "config/koneksi.php"; ?>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="page-header">Data Barang</h2>
           <hr>
-          <div class="row-search">
-            <a href="tambahbrg.php" style="margin-top:10px; margin-bottom:10px" class="btn btn-danger pull-right"><i class="fa fa-plus"></i>+ Tambah Barang</a>
 
-          </div>
+<div class="row-search" style="margin-top: 20px; display: flex; justify-content: flex-end;">
+    <a href="tambahbrg.php" class="btn btn-primary"><i class="fa fa-plus"></i>+ Tambah Barang</a>
+</div>
+
+
           <div class="row">
           <?php
          $query = $mysqli->query("SELECT * FROM barang ");
@@ -82,7 +84,7 @@ include "config/koneksi.php"; ?>
             ?>
   <div class="col-md-4" style="margin-top: 30px; margin-bottom: 30px">
     <div class="card">
-      <img src="<?php echo $lihat['foto']; ?>" class="card-img-top" alt="" width="400px" height="400px">
+      <img src="<?php echo $lihat['foto']; ?>" class="card-img-top" alt="" width="350px" height="300px">
       <div class="card-body">
         <h5 class="card-title"><?php echo $lihat['nama_brg']; ?></h5>
         <p class="card-text">Jenis Barang: <?php echo $lihat['jenis_brg']; ?></p>

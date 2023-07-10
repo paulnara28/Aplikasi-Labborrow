@@ -121,12 +121,21 @@ include "config/koneksi.php" ?>
                         </div>
                     </div>
                         </div>
-               <div class="row" style="margin-top: 20px;">
-                 <button type="submit" class="btn btn-danger">Tambah Data</button>
-                 <a href="peminjam.php" class="btn btn-danger margin-top:10px;">Back </a>
-               </div>
+
            </div>
         </div>
+        
       </div>
+      <div class="tambah" style="margin-top: 20px; display: flex; justify-content: space-between;">
+    <a href="peminjam.php" class="btn btn-danger">Back</a>
+    <button type="submit" class="btn btn-primary">Tambah Data</button>
+</div>
+
+
+
+              
+
+ 
+      </body>
 
     <?php require_once "templates/footer.php" ?>

@@ -108,15 +108,19 @@ include "config/koneksi.php" ?>
                     class="form-control datepicker" placeholder="Tanggal Pinjam..." required>
                     </div>
 
-              <div class="box=footer">
+
+                    <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+   
+              <a href="peminjaman.php" class="btn btn-danger">Back</a>
+            <button type="submit" class="btn btn-primary">Tambah Data</button>
             </div>
-            <tr>
-            <td><button type="submit" class="btn btn-danger">Tambah Data</button></td>
-            <td><a href="barang.php" class="btn btn-danger">Back</td>
-            </tr>
+                            
+
             </div>
         </div>
       </div>
     </div>
+
+    
 
     <?php require_once "templates/footer.php" ?>

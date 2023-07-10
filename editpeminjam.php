@@ -112,12 +112,11 @@ include "config/koneksi.php" ?>
                 }
             ?>
 
-             <div class="box-footer">
+            <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+             <a href="peminjam.php" class="btn btn-danger">Back</a>
+             <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
-            <br>
-            <br>
-            <button type="submit" class="btn btn-danger">Simpan</button>
-            <a href="peminjam.php" class="btn btn-danger">Back</a>
+
             </div>
             </form>
             </section><!-- /.content -->

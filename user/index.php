@@ -28,7 +28,7 @@ include("config.inc.php");
             ?>
                 <div class="col-md-4" style="padding: 50px">
                     <div class="card">
-                        <img src="../<?php echo $foto; ?>" class="card-img-top" alt="" width="200" height="200">
+                        <img src="../<?php echo $foto; ?>" class="card-img-top" alt="" width="350" height="300">
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row_alat['nama_brg']; ?></h4>
                             <p class="card-text">Jenis Barang: <?php echo $row_alat['jenis_brg']; ?></p>

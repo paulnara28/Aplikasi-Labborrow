@@ -121,10 +121,12 @@ include "config/koneksi.php" ?>
                       <input type="date" name="tgl_kembali" class="form-control" value="<?= date('Y-m-d', strtotime($qu['tgl_kembali'])) ?>">
                     </div>
 
-             <div class="box-footer">
-            </div>
-            <button type="submit" class="btn btn-danger">Simpan</button>
-            <a href="peminjaman.php" class="btn btn-danger">Back</a>
+
+           <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+            <a href="pengembalian.php" class="btn btn-danger">Back</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+           
+           </div>
             </div>
             </form>
             </section><!-- /.content -->

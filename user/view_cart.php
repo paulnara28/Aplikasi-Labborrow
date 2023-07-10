@@ -56,7 +56,7 @@ session_start();
       
                       </tbody>
                     </table>
-                    <button type="submit" class="btn btn-primary">Kembali</button>
+                    <button type="submit" class="btn btn-danger">Kembali</button>
                   </form>
             </div>
 

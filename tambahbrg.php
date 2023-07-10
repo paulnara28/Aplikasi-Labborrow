@@ -99,12 +99,15 @@ include "config/koneksi.php" ?>
                       <input type="file" name="foto" class="form-control" placeholder="Foto..." required>
                     </div>
                      
-            <div class="box=footer">
+
+            <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+            <a href="barang.php" class="btn btn-danger">Back</a>
+            <button type="submit" class="btn btn-primary" name="tambah">Tambah Data</button>
+
             </div>
-            <tr>
-            <td><button type="submit" class="btn btn-danger" name="tambah">Tambah Data</button></td>
-            <td><a href="barang.php" class="btn btn-danger">Back</td>
-            </tr>
+           
+  
+          
             </div>
         </div>
       </div>

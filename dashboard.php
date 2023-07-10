@@ -64,7 +64,7 @@
             <h2 class="text-center">Data Barang</h2>
             <hr>
           <div class="card-body d-flex justify-content-center align-items-center">
-          <img src="databarang.png" style="display: flex; padding-top:10px">
+          <img src="./user/images/databarang.png" style="display: flex; padding-top:10px">
           </div>
           <div class="text-center " style="padding-top: 10px;">
             <?php
@@ -78,6 +78,10 @@
         </div>
       </div>
     </div>
+
+  
+
+
     </body>
 </html>
     <?php require_once "templates/footer.php" ?>

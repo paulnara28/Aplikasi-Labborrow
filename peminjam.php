@@ -73,8 +73,10 @@ include "config/koneksi.php" ?>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="page-header">Data Anggota</h2>
           <hr>
-          <div class=""></div>
-          <a href="tambahpeminjam.php" class="btn btn-danger float-right" style="margin-bottom: 20px;"><i class="fa fa-plus"></i>+ Tambah Anggota</a>
+
+          <div class="row-search" style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: flex-end;">
+         <a href="tambahpeminjam.php" class="btn btn-primary"><i class="fa fa-plus"></i>+ Tambah Anggota</a>
+        </div>
 
 
               <table id="tabelanggota" class="table table-bordered table-hover">
