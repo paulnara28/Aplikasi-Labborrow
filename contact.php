@@ -29,13 +29,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link  fs-5" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link fs-5" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5" href="contact.php">Contact</a>
+                        <a class="nav-link active fs-5" href="index.php">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fs-5" href="tentangkami.php">Tentang Kami</a>
+                        <a class="nav-link fs-5" href="tentangkami.php">Tentang Kami</a>
                     </li>
                     <li class="nav-item ms-5 loggin-button">
                         <a href="login.php">
@@ -50,30 +50,53 @@
 
     <div class="container">
         <div class="row">
-            <div class="text-center " style="margin-top: 160px;">
-            <h1 class="fw-bolder" style="font-size: 48px;">About Our Company<br></h1>
+            <div class="text-center " style="margin-top: 135px;">
+            <h1 class="fw-bolder" style="font-size: 48px;">Contact Us<br></h1>
             <hr>
             </div>
-       
-        <div class="col-md-3 mt-4">
-                <img src="./images/perusahaan.png" alt="Company Image" style=" height: 250px;" class="img-fluid" >
-            </div>
-            <div class="col-md-9" style="margin-top: 70px; font-size:medium">
-                <p> Lab Borrow adalah perusahaan yang berdedikasi dalam menyediakan solusi peminjaman barang untuk kebutuhan laboratorium. Dengan pengalaman bertahun-tahun dalam industri ini, kami mengerti betapa pentingnya memiliki akses yang mudah dan cepat terhadap peralatan dan barang-barang laboratorium yang diperlukan.</p>
-                <p>Visi kami adalah memudahkan proses peminjaman barang lab dengan menyediakan platform online yang inovatif dan efisien. Kami ingin memastikan bahwa para peneliti, mahasiswa, dan staf laboratorium dapat fokus pada penelitian dan kegiatan laboratorium mereka tanpa hambatan atau kekhawatiran terkait persediaan peralatan.</p>
             </div>
 
-        </div>
+<div class="container py-4">
+  <form id="contactForm">
+    <div class="mb-3">
+      <label class="form-label" for="name">Name</label>
+      <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+      <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
     </div>
 
-    <footer class="bg-light text-center text-lg-start" >
-    <div class="text-center p-3" style="background-color: #1B5D8B; margin-top:218px;">
+    <div class="mb-3">
+      <label class="form-label" for="emailAddress">Email Address</label>
+      <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+      <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+      <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+      <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+    </div>
+
+    <div class="d-none" id="submitSuccessMessage">
+      <div class="text-center mb-3">Form submission successful!</div>
+    </div>
+
+    <div class="d-none" id="submitErrorMessage">
+      <div class="text-center text-danger mb-3">Error sending message!</div>
+    </div>
+
+    <div class="mt-2">
+      <button class="btn btn-primary btn-lg" type="submit">Send</button>
+    </div>
+  </form>
+</div>
+</div>
+
+<footer class="bg-light text-center text-lg-start" >
+    <div class="text-center p-3" style="background-color: #1B5D8B; margin-top:80px;">
         <i class="fas fa-gavel text-white" style="margin-right: 5px;"></i>
         <label class="text-white">2023 Copyright - Lab Borrow</label>
     </div>
 </footer>
-
-    
 </body>
-
 </html>

@@ -18,6 +18,9 @@ include "config/koneksi.php" ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" type="image/png" href="./images/logo1.png">
+  <title>Lab Borrow</title>
   <style>
     /* Style the sidebar */
     .sidebar {
@@ -57,27 +60,25 @@ include "config/koneksi.php" ?>
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="">
-    <a href="dashboard.php">Dashboard</a>
-    <a href="barang.php">Barang</a>
-    <a href="peminjam.php">Anggota</a>
-    <a href="peminjaman.php">Peminjaman</a>
-    <a href="pengembalian.php">Pengembalian</a>
-    </div>
+<div class="sidebar">
+  <a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+  <a href="barang.php"><i class="fas fa-box"></i> Barang</a>
+  <a href="peminjam.php"><i class="fas fa-users"></i> Anggota</a>
+  <a href="peminjaman.php"><i class="fas fa-clipboard"></i> Peminjaman</a>
+  <a href="pengembalian.php"><i class="fas fa-undo"></i> Pengembalian</a>
   </div>
 
   <div class="content">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
          <h2 class="page-header">Tambah Peminjaman</h2>
-
+          <hr>
           <form role="form1" action="prosestambahpeminjaman.php" method="post">
              <table>
                  <div class = "box-body">
 
                     <div class ="form-group">
-                    <label for="">Pilih Barang</label>
-                   <select name="nama_barang" class="form-control">
+                    <label for="">Pilih Barang :</label>
+                   <select name="nama_barang" class="form-control mt-2">
                         <option value="" selected disabled>- Pilih Barang -</option>
                         <?php
                           $sql = "select * from barang";
@@ -88,9 +89,9 @@ include "config/koneksi.php" ?>
                          <option value="<?php echo $data['id_brg'] ?>"><?php echo $data['nama_brg'] ?></option>
                          <?php } ?>
                       </select>
-                   <div class ="form-group">
-                   <label for="">Nama Peminjam</label>
-                      <select name="nama_peminjam" class="form-control">
+                   <div class ="form-group mt-3">
+                   <label for="">Nama Peminjam :</label>
+                      <select name="nama_peminjam" class="form-control mt-2">
                         <option value="" selected disabled>- Nama Peminjam -</option>
                         <?php
                           $sql = "select * from anggota";
@@ -102,17 +103,17 @@ include "config/koneksi.php" ?>
                          <?php } ?>
                       </select>
                     </div>
-                     <div class ="form-group">
-                    <label for="exampleInputPassword1">Tanggal Pinjam</label>
+                     <div class ="form-group mt-3">
+                    <label for="exampleInputPassword1">Tanggal Pinjam :</label>
                     <input type="date"   name="tgl_pinjam"
-                    class="form-control datepicker" placeholder="Tanggal Pinjam..." required>
+                    class="form-control mt-2 datepicker" placeholder="Tanggal Pinjam..." required>
                     </div>
 
 
-                    <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+                    <div class="box mt-5" style=" display: flex; justify-content: space-between;">
    
               <a href="peminjaman.php" class="btn btn-danger">Back</a>
-            <button type="submit" class="btn btn-primary">Tambah Data</button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</button>
             </div>
                             
 
@@ -120,7 +121,3 @@ include "config/koneksi.php" ?>
         </div>
       </div>
     </div>
-
-    
-
-    <?php require_once "templates/footer.php" ?>

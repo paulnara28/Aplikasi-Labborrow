@@ -9,12 +9,17 @@ include("config.inc.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Daftar Alat</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="icon" type="image/png" href="../images/logo1.png">
+    <title>Lab Borrow</title>
 </head>
 
 <body>
-    <h3 style="text-align:center;">Daftar Alat</h3>
+	<div class="mt-3">
+    <h3 style="text-align:center;">Daftar Barang</h3>
     <hr>
+	</div>
+
 
     <?php
     //List produk dari database
@@ -34,7 +39,7 @@ include("config.inc.php");
                             <p class="card-text">Jenis Barang: <?php echo $row_alat['jenis_brg']; ?></p>
                             <p class="card-text">Stok: <?php echo $row_alat['stok_brg']; ?></p>
                             <div class="text-center">
-                                <a href="cartfunction.php?act=add&amp;id_product=<?php echo $row_alat['id_brg']; ?>&amp;id_pembeli=<?php echo $_SESSION['id_anggota']; ?>&amp;ref=view_cart.php" class="btn btn-primary"><font color="white">Pinjam Barang</font></a>
+                                <a href="cartfunction.php?act=add&amp;id_product=<?php echo $row_alat['id_brg']; ?>&amp;id_pembeli=<?php echo $_SESSION['id_anggota']; ?>&amp;ref=view_cart.php" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Pinjam Barang</a>
                             </div>
                         </div>
                     </div>

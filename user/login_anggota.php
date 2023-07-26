@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="../images/logo1.png">
     <title>Lab Borrow</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
 
     <!--------------------------- Left Box ----------------------------->
 
-       <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: ">
+       <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" >
            <div class="featured-image mb-3">
             <img src="../user/images/user.png" class="img-fluid" >
            </div>
@@ -46,9 +47,9 @@
                 </div>
                 
                 <div class="input-group mb-3">
-                <a href="../register.php" class="btn btn-lg btn-light w-100 fs-6">
+                <a href="../login.php" class="btn btn-lg btn-light w-100 fs-6">
                   <img src="../user/images/user.png" style="width:20px" class="me-2">
-                 <small>Register</small>
+                 <small>Login Sebagai Admin</small>
                 </a>
                 </div>
                

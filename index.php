@@ -1,156 +1,86 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<title> Peminjaman Alat </title>
+<html lang="en">
 
-<!-- Latest compiled and minified CSS -->
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-
+    <link rel="icon" type="image/png" href="./images/logo1.png">
+    <title>Lab Borrow</title>
+    <style>
+    * {
+        font-family: 'Roboto', monospace;
+    }
+    </style>
 </head>
 
 <body>
+    <nav class=" navbar fixed-top navbar-expand-lg navbar-dark " style="background-color: #2691D9;">
+        <div class="container ">
+        <a class="navbar-brand" style="font-size: 25px;" href="#">
+            <img src="./images/logo1.png" alt="Lab Borrow Logo" style="height: 45px; width: 45px; margin-right: 5px;">
+            Lab Borrow
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="contact.php">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="tentangkami.php">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item ms-5 loggin-button">
+                        <a href="login.php">
+                            <button type="button" class="btn btn-light "
+                                style="color: #2691D9; font-weight:bold"><i class="fas fa-sign-in-alt"></i> Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- AKhir Navbar -->
+    <div class="container-fluid " style="height: 100vh; ">
+        <div class="row  ">
+            <div class="col-6  d-flex align-items-center">
+                <div class="bungkus ms-5" style="width: 35vw; margin-top: 100px;">
+                    <h1 class="fw-bolder" style="font-size: 48px; margin-left: 50px">Welcome Rent Here <br>
+                        For Those Who Have An Account</h1>
+                    <p class="mt-4" style="margin-left: 50px">Selamat Datang di Lab Borrow, Tempat Terbaik untuk Memenuhi Kebutuhan Peminjaman Barang Laboratorium Komputer !!</p>
+                    <a href="tentangkami.php" style="margin-left: 50px"><button type="button" class="btn btn-primary px-3 mt-3">Read
+                            Now!</button></a>
+                </div>
 
+            </div>
+            <div class="col-6 mt-5">
+                <img class="" src="./images/tentangkami.png" alt=""  style="width: 520px; margin-top: 100px;">
+            </div>
+        </div>
+    </div>
 
-
-  <style>
-  footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #262424;
-  height: auto;
-  width: 100vw;
-  font-family: "Open Sans";
-  padding-top: 40px;
-  color: #fff;
-}
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-.footer-content h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-transform: capitalize;
-  line-height: 3rem;
-}
-.footer-content p {
-  max-width: 500px;
-  margin: 10px ;
-  line-height: 28px;
-  font-size: 14px;
-}
-.socials {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0 3rem 0;
-}
-.socials li {
-  margin: 0 10px;
-}
-.socials a {
-  text-decoration: none;
-  color: #fff;
-}
-.socials a i {
-  font-size: 1.1rem;
-  transition: color 0.4s ease;
-}
-.socials a:hover i {
-  color: aqua;
-}
-
-.footer-bottom {
-  background: #000;
-  width: 100vw;
-  padding: 20px 0;
-  text-align: center;
-}
-.footer-bottom p {
-  font-size: 14px;
-  word-spacing: 2px;
-  text-transform: capitalize;
-}
-.footer-bottom span {
-  text-transform: uppercase;
-  opacity: 0.4;
-  font-weight: 200;
-}
-</style>
-
-
-
-
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <a class="navbar-brand" href="index.php">Peminjaman Alat</a>
-    
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse d-flex" id="navbarNav">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.php">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="">Contact</a>
-    </li>
-    <li class="nav-item ">
-      <a class="nav-link" href="tentangkami.php" style="margin-right: 30px;">Tentang Kami</a>
-    </li>
-  </ul>
-  <ul class="navbar-nav ms-auto">
-    <li class="nav-item"></li>
-      <a class="nav-link" href="login.php" >Login</a>
-    </li>
-  </ul>
-</div><!-- /.navbar-collapse -->
-
-  </div><!-- /.container-fluid -->
-</nav>
-
-</br></br></br>
-<?php
-  include "carousel.php";
-  ?>
-  </br></br></br>
-
-  <!--footer-->
-  <footer>
-   <div class="footer-content">
-       <h3>LAB BORROW</h3>
-       <p>Menyediakan solusi peminjaman barang untuk kebutuhan laboratorium. Dengan pengalaman bertahun-tahun dalam industri ini, kami mengerti betapa pentingnya memiliki akses yang mudah dan cepat terhadap peralatan dan barang-barang laboratorium yang diperlukan</p>
-       <ul class="socials">
-           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-           <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-           <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-       </ul>
-   </div>
-   <div class="footer-bottom">
-       <p>Copyright &copy;2023 LabBorrow</p>
-   </div>
+    <footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: #1B5D8B;">
+        <i class="fas fa-gavel text-white" style="margin-right: 5px;"></i>
+        <label class="text-white">2023 Copyright - Lab Borrow</label>
+    </div>
 </footer>
 
-
-
-  <?php require_once "templates/footer.php" ?> <script type="text/javascript">
-    $('.carousel').carousel();
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
+</body>
+
+</html>

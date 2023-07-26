@@ -8,3 +8,4 @@ if($hapus){
 	echo"gagal menghapus data";
 }
 ?>
+

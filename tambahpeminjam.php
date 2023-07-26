@@ -19,6 +19,9 @@ include "config/koneksi.php" ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" type="image/png" href="./images/logo1.png">
+  <title>Lab Borrow</title>
   <style>
     /* Style the sidebar */
     .sidebar {
@@ -58,14 +61,12 @@ include "config/koneksi.php" ?>
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="">
-    <a href="dashboard.php">Dashboard</a>
-    <a href="barang.php">Barang</a>
-    <a href="peminjam.php">Anggota</a>
-    <a href="peminjaman.php">Peminjaman</a>
-    <a href="pengembalian.php">Pengembalian</a>
-    </div>
+<div class="sidebar">
+  <a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+  <a href="barang.php"><i class="fas fa-box"></i> Barang</a>
+  <a href="peminjam.php"><i class="fas fa-users"></i> Anggota</a>
+  <a href="peminjaman.php"><i class="fas fa-clipboard"></i> Peminjaman</a>
+  <a href="pengembalian.php"><i class="fas fa-undo"></i> Pengembalian</a>
   </div>
 
   <div class="content">
@@ -73,43 +74,35 @@ include "config/koneksi.php" ?>
           <h2 class="page-header">Tambah Anggota</h2>
           <form role="form1" action="prosestambahpeminjam.php" method="post">
              <table>
-                 <div class = "box-body">
-                     <div class ="form-group">
-                    </div>
+                 <div class = "box-body mt-3">
+                  <hr>
                     <div class ="form-group">
                         <label for="exampleInputPassword1">Nama</label>
-                        <input type="text"  name="nama" class="form-control" placeholder="Username..." required>
+                        <input type="text"  name="nama" class="form-control mt-2" placeholder="Username..." required>
                     </div>
-                   <div class ="form-group">
+                   <div class ="form-group mt-3">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password"   name="password"
-                        class="form-control" placeholder="Password..." required>
+                        class="form-control mt-2" placeholder="Password..." required>
                     </div>
 
-                        <div class="row">
-                        <label>Kelas</label>
-                    <div class ="form-group">
-                        <div class="col-md-3">
-                          <select name="kelas" class="form-control">
-                            <option value="" disabled selected>- Pilih Kelas -</option>
-                            <option value="10">X</option>
-                            <option value="11">XI</option>
-                            <option value="12">XII</option>
-                          </select>
-                        </div>
-                        <div class="col-md-3">
-                          <select name="jurusan" class="form-control">
+                        <div class="row mt-3">
+
+
+                        <div class="col-md-3 mt-2">
+                        <label>Jurusan :</label>
+                          <select name="jurusan" class="form-control mt-2">
                             <option value="" disabled selected>- Pilih Jurusan -</option>
-                            <option value="RPL">Rekayasa Perangkat Lunak</option>
-                            <option value="MM">Multi Media</option>
-                            <option value="JB">Jasa Boga</option>
-                            <option value="TKJ">Teknik Komputer dan Jaringan</option>
-                            <option value="APH">Akomodasi Perhotelan</option>
-                            <option value="ANM">Animasi</option>
+                            <option value="IF">Informatika</option>
+                            <option value="SI">Sistem Informasi</option>
+                            <option value="TI">Teknologi Informasi</option>
+                            <option value="TK">Teknik Komputer </option>
                           </select>
                         </div>
-                        <div class="col-md-3">
-                          <select name="no" class="form-control">
+
+                        <div class="col-md-3 mt-2">
+                        <label>Nomor Kelas :</label>
+                          <select name="no" class="form-control mt-2">
                             <option value="" disabled selected>- No Kelas -</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -126,16 +119,12 @@ include "config/koneksi.php" ?>
         </div>
         
       </div>
-      <div class="tambah" style="margin-top: 20px; display: flex; justify-content: space-between;">
+      <div class="box mt-5" style="display: flex; justify-content: space-between;">
     <a href="peminjam.php" class="btn btn-danger">Back</a>
-    <button type="submit" class="btn btn-primary">Tambah Data</button>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</button>
 </div>
 
 
 
-              
-
- 
+    
       </body>
-
-    <?php require_once "templates/footer.php" ?>

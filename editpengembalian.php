@@ -6,6 +6,7 @@ if(!isset($_SESSION['admin'])) {
    $username = $_SESSION['admin'];
 }
 ?>
+
 <?php
 include "config/koneksi.php" ?>
 <!DOCTYPE html>
@@ -18,8 +19,11 @@ include "config/koneksi.php" ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" type="image/png" href="./images/logo1.png">
+  <title>Lab Borrow</title>
   <style>
-    /* Style the sidebar */
+
     .sidebar {
       height: 100%;
       width: 200px;
@@ -31,7 +35,6 @@ include "config/koneksi.php" ?>
       padding-top: 70px;
     }
 
-    /* Style the navigation menu */
     .sidebar a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
@@ -40,13 +43,11 @@ include "config/koneksi.php" ?>
       display: block;
     }
 
-    /* Change color on hover */
     .sidebar a:hover {
       background-color: #F5F5F5;
       color: black;
     }
 
-    /* Style the content */
     .content {
       margin-left: 200px;
       padding: 20px;
@@ -57,14 +58,12 @@ include "config/koneksi.php" ?>
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="">
-    <a href="dashboard.php">Dashboard</a>
-    <a href="barang.php">Barang</a>
-    <a href="peminjam.php">Anggota</a>
-    <a href="peminjaman.php">Peminjaman</a>
-    <a href="pengembalian.php">Pengembalian</a>
-    </div>
+<div class="sidebar">
+  <a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+  <a href="barang.php"><i class="fas fa-box"></i> Barang</a>
+  <a href="peminjam.php"><i class="fas fa-users"></i> Anggota</a>
+  <a href="peminjaman.php"><i class="fas fa-clipboard"></i> Peminjaman</a>
+  <a href="pengembalian.php"><i class="fas fa-undo"></i> Pengembalian</a>
   </div>
 
   <div class="content">
@@ -72,12 +71,10 @@ include "config/koneksi.php" ?>
           <h1 class="page-header">Edit Pengembalian</h1>
 
               <section class="row">
-                <!-- left column -->
                 <div class="col-md-12">
-                <!-- general form element -->
                 <div class="box box-danger">
                 <div class="box-header with-border">
-                </div><!--/.box-header-->
+                </div>
                 <?php
                   $id = $_GET['id_pengembalian'];
                   $query = $mysqli->query("SELECT pengembalian.*,
@@ -95,43 +92,40 @@ include "config/koneksi.php" ?>
                             WHERE pengembalian.id='$id'");
                   $qu = mysqli_fetch_array($query);
                     ?>
+
                   <!-- form start -->
                   <form role="form" action="proseseditpengembalian.php?id=<?= $id ?>" method="post">
                   <div class = "box-body">
                   <div class ="form-group">
-                    <label for="exampleInputEmail1">ID</label>
-                    <input type="text" disable value="<?php echo $qu['id_peminjaman'] ?>" name="id" class="form-control" placeholder="" disabled>
+                    <label for="exampleInputEmail1">ID :</label>
+                    <input type="text" disable value="<?php echo $qu['id_peminjaman'] ?>" name="id" class="form-control mt-2" placeholder="" disabled>
                     <input type="hidden" value="<?= $qu['id_peminjaman']; ?>" name="id">
                     </div>
-                    <div class ="form-group">
-                    <label for="exampleInputPassword1">Nama Barang</label>
-                    <input type="text" name="nama_brg" readonly="" class="form-control" disabled value="<?= $qu['nama_brg'] ?>">
+                    <div class ="form-group mt-3">
+                    <label for="exampleInputPassword1">Nama Barang :</label>
+                    <input type="text" name="nama_brg" readonly="" class="form-control mt-2" disabled value="<?= $qu['nama_brg'] ?>">
                     </div>
-                   <div class ="form-group">
-                    <label for="exampleInputPassword1">Nama Peminjam</label>
-                    <input type="text" name="nama" class="form-control" disabled value="<?= $qu['nama'] ?>" readonly>
+                   <div class ="form-group mt-3">
+                    <label for="exampleInputPassword1">Nama Peminjam :</label>
+                    <input type="text" name="nama" class="form-control mt-2" disabled value="<?= $qu['nama'] ?>" readonly>
                     </div>
-                     <div class ="form-group">
-                    <label for="exampleInputPassword1">Tanggal Pinjam</label>
+                     <div class ="form-group mt-3">
+                    <label for="exampleInputPassword1">Tanggal Pinjam :</label>
                    <input type="date" disabled value="<?php echo date('Y-m-d', strtotime($qu['tgl_pinjam'])) ?>"  name="tgl_pinjam"
-                    class="form-control datepicker" required readonly>
+                    class="form-control mt-2 datepicker" required readonly>
                     </div>
-                    <div class="form-group">
-                      <label>Tanggal Kembali</label>
-                      <input type="date" name="tgl_kembali" class="form-control" value="<?= date('Y-m-d', strtotime($qu['tgl_kembali'])) ?>">
+                    <div class="form-group mt-3">
+                      <label>Tanggal Kembali :</label>
+                      <input type="date" name="tgl_kembali" class="form-control mt-2" value="<?= date('Y-m-d', strtotime($qu['tgl_kembali'])) ?>">
                     </div>
 
 
-           <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+           <div class="box mt-5" style=" display: flex; justify-content: space-between;">
             <a href="pengembalian.php" class="btn btn-danger">Back</a>
-            <button type="submit" class="btn btn-primary">Simpan</button>
-           
+            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
            </div>
             </div>
             </form>
             </section><!-- /.content -->
-
           </div>
         </div>
-
-    <?php require_once "templates/footer.php" ?>

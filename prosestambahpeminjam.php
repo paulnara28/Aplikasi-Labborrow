@@ -10,5 +10,3 @@ $query = $mysqli->query("INSERT INTO anggota(nama, password, kelas ) values ('$u
 } else {
     echo "gagal menambah data";
   }
-
-?>

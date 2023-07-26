@@ -18,8 +18,11 @@ include "config/koneksi.php" ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" type="image/png" href="./images/logo1.png">
+  <title>Lab Borrow</title>
   <style>
-    /* Style the sidebar */
+ 
     .sidebar {
       height: 100%;
       width: 200px;
@@ -31,7 +34,7 @@ include "config/koneksi.php" ?>
       padding-top: 70px;
     }
 
-    /* Style the navigation menu */
+   
     .sidebar a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
@@ -40,13 +43,13 @@ include "config/koneksi.php" ?>
       display: block;
     }
 
-    /* Change color on hover */
+  
     .sidebar a:hover {
       background-color: #F5F5F5;
       color: black;
     }
 
-    /* Style the content */
+
     .content {
       margin-left: 200px;
       padding: 20px;
@@ -57,20 +60,18 @@ include "config/koneksi.php" ?>
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="">
-    <a href="dashboard.php">Dashboard</a>
-    <a href="barang.php">Barang</a>
-    <a href="peminjam.php">Anggota</a>
-    <a href="peminjaman.php">Peminjaman</a>
-    <a href="pengembalian.php">Pengembalian</a>
-    </div>
+<div class="sidebar">
+  <a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+  <a href="barang.php"><i class="fas fa-box"></i> Barang</a>
+  <a href="peminjam.php"><i class="fas fa-users"></i> Anggota</a>
+  <a href="peminjaman.php"><i class="fas fa-clipboard"></i> Peminjaman</a>
+  <a href="pengembalian.php"><i class="fas fa-undo"></i> Pengembalian</a>
   </div>
 
   <div class="content">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Edit Anggota</h1>
-
+          <hr>
               <section class="row">
                 <!-- left column -->
                 <div class="col-md-12">
@@ -88,33 +89,33 @@ include "config/koneksi.php" ?>
                   <form role="form" action="proseseditpeminjam.php" method="post">
                   <div class = "box-body">
                   <div class ="form-group">
-                    <label for="exampleInputEmail1">No</label>
-                    <input type="text" disable value="<?php echo $qu['id_anggota'] ?>" name="id_peminjam" class="form-control" placeholder="" disabled>
+                    <label for="exampleInputEmail1">No :</label>
+                    <input type="text" disable value="<?php echo $qu['id_anggota'] ?>" name="id_peminjam" class="form-control mt-2" placeholder="" disabled>
                     <input type="hidden" value="<?= $qu['id_anggota']; ?>" name="id_peminjam">
                     </div>
-                    <div class ="form-group">
-                    <label for="exampleInputPassword1">Username </label>
+                    <div class ="form-group mt-3">
+                    <label for="exampleInputPassword1">Username :</label>
                     <input type="text"  value="<?php echo$qu['nama'] ?>" name="username"
-                    class="form-control" placeholder="" required>
+                    class="form-control mt-2" placeholder="" required>
                     </div>
-                    <div class ="form-group">
-                    <label for="exampleInputPassword1">Password </label>
+                    <div class ="form-group mt-3">
+                    <label for="exampleInputPassword1">Password :</label>
                     <input type="password"  value="<?php echo$qu['password'] ?>" name="password"
-                    class="form-control" placeholder="" required>
+                    class="form-control mt-2" placeholder="" required>
                     </div>
-                    <div class ="form-group">
-                      <label for="exampleInputPassword1">Kelas </label>
+                    <div class ="form-group mt-3">
+                      <label for="exampleInputPassword1">Jurusan :</label>
                       <input type="text" disabled value="<?php echo$qu['kelas'] ?>" name="kelas"
-                      class="form-control" placeholder="" required>
+                      class="form-control mt-2" placeholder="" required>
                     </div>
 
                 <?php
                 }
             ?>
 
-            <div class="box" style="margin-top: 20px; display: flex; justify-content: space-between;">
+            <div class="box mt-5" style=" display: flex; justify-content: space-between;">
              <a href="peminjam.php" class="btn btn-danger">Back</a>
-             <button type="submit" class="btn btn-primary">Simpan</button>
+             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
             </div>
 
             </div>
@@ -124,4 +125,3 @@ include "config/koneksi.php" ?>
           </div>
         </div>
 
-    <?php require_once "templates/footer.php" ?>
